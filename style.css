@@ -1,58 +1,248 @@
-body {
-    background-color: #f5e6ff;
-    color: #333;
-    font-family: Arial;
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
 
-header {
-    background-color: purple;
+body {
+    margin: 0;
+    background-color: #fff7cf;
+    color: #2b2318;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.hero {
+    min-height: 380px;
+    background: linear-gradient(rgba(255, 194, 51, 0.85), rgba(255, 247, 207, 0.9)), url("keilah_home.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 45px;
+}
+
+.hero-text {
+    background-color: rgba(255, 255, 255, 0.88);
+    max-width: 650px;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    animation: floatIn 1.5s ease;
+}
+
+.hero h1, .page-header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #7a4b00;
+}
+
+.hero p, .page-header p {
+    font-size: 1.2rem;
+}
+
+.button, button {
+    display: inline-block;
+    background-color: #7a4b00;
     color: white;
-    text-align: center;
-    padding: 20px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+}
+
+.button:hover, button:hover {
+    background-color: #b87500;
 }
 
 nav {
-    background-color: black;
-    padding: 10px;
+    background-color: #2b2318;
     text-align: center;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
-    color: white;
-    margin: 15px;
+    color: #ffe680;
     text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+}
+
+main {
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
 }
 
 section {
-    padding: 20px;
+    margin: 35px 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 25px;
+    align-items: center;
 }
 
 img {
-    width: 300px;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 22px;
+    border: 6px solid #ffd84d;
 }
 
-table, th, td {
-    border: 1px solid black;
+blockquote {
+    background-color: #fff0a6;
+    border-left: 8px solid #d49b00;
+    padding: 18px;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    font-style: italic;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.card {
+    background-color: white;
+    border-top: 10px solid #ffc933;
+    padding: 22px;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+table {
+    width: 100%;
     border-collapse: collapse;
-    padding: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+th {
+    background-color: #7a4b00;
+    color: white;
+}
+
+td, th {
+    border: 1px solid #e0c15b;
+    padding: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #fff6c7;
+}
+
+.video-box {
+    text-align: center;
+}
+
+iframe {
+    max-width: 100%;
+    border: 5px solid #ffd84d;
+    border-radius: 15px;
+}
+
+.page-header {
+    background: linear-gradient(135deg, #ffc933, #fff0a6);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.pretty-list li {
+    background-color: #fff6c7;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+form {
+    background-color: #fff6c7;
+    padding: 25px;
+    border-radius: 22px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d49b00;
+    border-radius: 12px;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 120px;
 }
 
 footer {
-    background-color: purple;
-    color: white;
+    background-color: #2b2318;
+    color: #ffe680;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 20px;
+    margin-top: 35px;
 }
 
-h1 {
-    animation: glow 2s infinite;
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes glow {
-    0% {color: white;}
-    50% {color: yellow;}
-    100% {color: white;}
+@media (max-width: 760px) {
+    .intro, .cards, .gallery, .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1, .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
 }
