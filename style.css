@@ -1,0 +1,58 @@
+body {
+    background-color: #f5e6ff;
+    color: #333;
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+footer {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+h1 {
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0% {color: white;}
+    50% {color: yellow;}
+    100% {color: white;}
+}
